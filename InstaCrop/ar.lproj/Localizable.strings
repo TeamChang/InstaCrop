@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  InstaCrop
+
+  Created by Timchang Wuyep on 30/12/2023.
+  
+*/
+"proFeatures" = "▪ قم بإزالة جميع الإعلانات
+▪ صور عالية الدقة
+▪ جميع التحديثات المستقبلية";
+
+"Purchase for %@" = "الشراء بمبلغ %@";
+
+"restorePurchase" = "استعادة الشراء";
+"moreApps" = "المزيد من التطبيقات";
+
+"imageSaved" = "تم حفظ الصورة بنجاح.";
+"imageNotSaved" = "لم يتم حفظ الصورة.";
+
+"alertCancel" = "إلغاء";
+"alertOk" = "موافق";
+"moreApps" = "المزيد من التطبيقات لهذا المطور";
+
+//alertError
+"alertError" = "خطأ !";
+"alertErrorMsg" = "حدث خطأ ما، يرجى المحاولة مرة أخرى.";
+
+//alertButtons
+"restorePurchase" = "استعادة الشراء";
+"restoreSuccessful" = "تم استعادة المشتريات بنجاح";
+
+//mail message
+"mailErrorMessage" = "الجهاز غير قادر على إرسال البريد. يرجى تكوين تطبيق البريد.";
+"mailBody" = "مرحبًا، ...";
+"emailCancelled" = "تم إلغاء البريد الإلكتروني.";
+"emailFailed" = "فشل إرسال البريد الإلكتروني.";
+"emailSaved" = "تم حفظ البريد الإلكتروني.";
+"emailSent" = "تم إرسال البريد الإلكتروني.";
+"emailSentBody" = "يرجى التحقق من صندوق البريد الوارد الخاص بك للحصول على رد.";
+

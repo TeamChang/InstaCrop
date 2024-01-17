@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  InstaCrop
+
+  Created by Timchang Wuyep on 30/12/2023.
+  
+*/
+"proFeatures" = "▪ Entfernen Sie alle Anzeigen
+▪ Hochauflösende Fotos
+▪ Alle zukünftigen Aktualisierungen";
+
+"Purchase for %@" = "Kaufen für %@";
+
+"restorePurchase" = "Kauf wiederherstellen";
+"moreApps" = "Weitere Apps";
+
+"imageSaved" = "Bild erfolgreich gespeichert.";
+"imageNotSaved" = "Bild nicht gespeichert.";
+
+"alertCancel" = "Abbrechen";
+"alertOk" = "OK";
+"moreApps" = "Weitere Apps von diesem Entwickler";
+
+//alertError
+"alertError" = "Fehler!";
+"alertErrorMsg" = "Etwas ist schiefgegangen. Bitte versuchen Sie es erneut.";
+
+//alertButtons
+"restorePurchase" = "Käufe wiederherstellen";
+"restoreSuccessful" = "Käufe wurden erfolgreich wiederhergestellt";
+
+//mail message
+"mailErrorMessage" = "Gerät kann keine E-Mails senden. Konfigurieren Sie die E-Mail-App.";
+"mailBody" = "Hallo, ...";
+"emailCancelled" = "E-Mail wurde abgebrochen.";
+"emailFailed" = "E-Mail konnte nicht gesendet werden.";
+"emailSaved" = "E-Mail gespeichert.";
+"emailSent" = "E-Mail gesendet.";
+"emailSentBody" = "Bitte überprüfen Sie Ihren E-Mail-Posteingang auf eine Antwort.";
+

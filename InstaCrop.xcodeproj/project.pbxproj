@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C60799E4848E411C3A2052F /* Pods_InstaCrop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF81C57C8FBF51BB3C9CCC5 /* Pods_InstaCrop.framework */; };
+		261CA0DC2B3C88E1000D1071 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261CA0DB2B3C88E1000D1071 /* EditVC.swift */; };
+		26251AEE2B3F9D5C00A6F330 /* FiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26251AEC2B3F9D5C00A6F330 /* FiltersCell.swift */; };
+		26251AEF2B3F9D5C00A6F330 /* FiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26251AED2B3F9D5C00A6F330 /* FiltersCell.xib */; };
+		267B385A2B4BF7E7002B9789 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B38592B4BF7E7002B9789 /* StoreKitManager.swift */; };
 		26A0F6482B343728005C0352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0F6472B343728005C0352 /* AppDelegate.swift */; };
 		26A0F64A2B343728005C0352 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0F6492B343728005C0352 /* SceneDelegate.swift */; };
 		26A0F64C2B343728005C0352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0F64B2B343728005C0352 /* ViewController.swift */; };
 		26A0F64F2B343728005C0352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A0F64D2B343728005C0352 /* Main.storyboard */; };
 		26A0F6512B34372B005C0352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A0F6502B34372B005C0352 /* Assets.xcassets */; };
 		26A0F6542B34372B005C0352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A0F6522B34372B005C0352 /* LaunchScreen.storyboard */; };
+		26C01FF72B40337600FF7DC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26C01FF92B40337600FF7DC3 /* Localizable.strings */; };
+		26E7BAA02B3F7A3F00782431 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7BA9F2B3F7A3F00782431 /* Extensions.swift */; };
+		26E7BAA22B3F7D4200782431 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7BAA12B3F7D4200782431 /* SettingsVC.swift */; };
+		26ECB0622B4192AB0098ECAE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26ECB0612B4192AB0098ECAE /* StoreKit.framework */; };
+		26EDDDEA2B40D7AE0022485A /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDDDE92B40D7AE0022485A /* UserDefaultsKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		261CA0DB2B3C88E1000D1071 /* EditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
+		26251AEC2B3F9D5C00A6F330 /* FiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCell.swift; sourceTree = "<group>"; };
+		26251AED2B3F9D5C00A6F330 /* FiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersCell.xib; sourceTree = "<group>"; };
+		267B38582B4BF367002B9789 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
+		267B38592B4BF7E7002B9789 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
 		26A0F6442B343728005C0352 /* InstaCrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A0F6472B343728005C0352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26A0F6492B343728005C0352 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +39,19 @@
 		26A0F6502B34372B005C0352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26A0F6532B34372B005C0352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26A0F6552B34372B005C0352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26C01FF82B40337600FF7DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		26C01FFA2B4033B000FF7DC3 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		26C01FFB2B4033C400FF7DC3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		26C01FFC2B4033D200FF7DC3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		26C01FFD2B4033EA00FF7DC3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		26C01FFE2B40340000FF7DC3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		26E7BA9F2B3F7A3F00782431 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		26E7BAA12B3F7D4200782431 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		26ECB0612B4192AB0098ECAE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		26EDDDE92B40D7AE0022485A /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		2AF81C57C8FBF51BB3C9CCC5 /* Pods_InstaCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4247EBF96CC50CC7C96CFBF6 /* Pods-InstaCrop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCrop.release.xcconfig"; path = "Target Support Files/Pods-InstaCrop/Pods-InstaCrop.release.xcconfig"; sourceTree = "<group>"; };
+		FDB7671710C2A8CEECFE5DF1 /* Pods-InstaCrop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCrop.debug.xcconfig"; path = "Target Support Files/Pods-InstaCrop/Pods-InstaCrop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C60799E4848E411C3A2052F /* Pods_InstaCrop.framework in Frameworks */,
+				26ECB0622B4192AB0098ECAE /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +70,11 @@
 		26A0F63B2B343728005C0352 = {
 			isa = PBXGroup;
 			children = (
+				267B38582B4BF367002B9789 /* Products.storekit */,
 				26A0F6462B343728005C0352 /* InstaCrop */,
 				26A0F6452B343728005C0352 /* Products */,
+				B6EC5BB870114480E830CEC2 /* Pods */,
+				B67E8C78BB7A56EB82F089D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +89,65 @@
 		26A0F6462B343728005C0352 /* InstaCrop */ = {
 			isa = PBXGroup;
 			children = (
+				26A0F65E2B346846005C0352 /* Model */,
+				26A0F65B2B3467F4005C0352 /* Controller */,
+				26A0F65C2B34681C005C0352 /* View */,
+				26A0F6552B34372B005C0352 /* Info.plist */,
+				26C01FF92B40337600FF7DC3 /* Localizable.strings */,
+			);
+			path = InstaCrop;
+			sourceTree = "<group>";
+		};
+		26A0F65B2B3467F4005C0352 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				26A0F6472B343728005C0352 /* AppDelegate.swift */,
 				26A0F6492B343728005C0352 /* SceneDelegate.swift */,
 				26A0F64B2B343728005C0352 /* ViewController.swift */,
+				261CA0DB2B3C88E1000D1071 /* EditVC.swift */,
+				26E7BAA12B3F7D4200782431 /* SettingsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		26A0F65C2B34681C005C0352 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				26A0F64D2B343728005C0352 /* Main.storyboard */,
 				26A0F6502B34372B005C0352 /* Assets.xcassets */,
 				26A0F6522B34372B005C0352 /* LaunchScreen.storyboard */,
-				26A0F6552B34372B005C0352 /* Info.plist */,
+				26251AEC2B3F9D5C00A6F330 /* FiltersCell.swift */,
+				26251AED2B3F9D5C00A6F330 /* FiltersCell.xib */,
 			);
-			path = InstaCrop;
+			path = View;
+			sourceTree = "<group>";
+		};
+		26A0F65E2B346846005C0352 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26E7BA9F2B3F7A3F00782431 /* Extensions.swift */,
+				26EDDDE92B40D7AE0022485A /* UserDefaultsKeys.swift */,
+				267B38592B4BF7E7002B9789 /* StoreKitManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B67E8C78BB7A56EB82F089D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26ECB0612B4192AB0098ECAE /* StoreKit.framework */,
+				2AF81C57C8FBF51BB3C9CCC5 /* Pods_InstaCrop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6EC5BB870114480E830CEC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7671710C2A8CEECFE5DF1 /* Pods-InstaCrop.debug.xcconfig */,
+				4247EBF96CC50CC7C96CFBF6 /* Pods-InstaCrop.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26A0F6582B34372B005C0352 /* Build configuration list for PBXNativeTarget "InstaCrop" */;
 			buildPhases = (
+				572A4DEF798CBD2E6B59CCF0 /* [CP] Check Pods Manifest.lock */,
 				26A0F6402B343728005C0352 /* Sources */,
 				26A0F6412B343728005C0352 /* Frameworks */,
 				26A0F6422B343728005C0352 /* Resources */,
+				96CDE0AD0985BFDBEE16B020 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,6 +194,11 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				fr,
+				de,
+				"pt-BR",
+				es,
 			);
 			mainGroup = 26A0F63B2B343728005C0352;
 			productRefGroup = 26A0F6452B343728005C0352 /* Products */;
@@ -125,7 +215,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C01FF72B40337600FF7DC3 /* Localizable.strings in Resources */,
 				26A0F6542B34372B005C0352 /* LaunchScreen.storyboard in Resources */,
+				26251AEF2B3F9D5C00A6F330 /* FiltersCell.xib in Resources */,
 				26A0F6512B34372B005C0352 /* Assets.xcassets in Resources */,
 				26A0F64F2B343728005C0352 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +225,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		572A4DEF798CBD2E6B59CCF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaCrop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96CDE0AD0985BFDBEE16B020 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaCrop/Pods-InstaCrop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaCrop/Pods-InstaCrop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaCrop/Pods-InstaCrop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		26A0F6402B343728005C0352 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E7BAA02B3F7A3F00782431 /* Extensions.swift in Sources */,
 				26A0F64C2B343728005C0352 /* ViewController.swift in Sources */,
+				26EDDDEA2B40D7AE0022485A /* UserDefaultsKeys.swift in Sources */,
 				26A0F6482B343728005C0352 /* AppDelegate.swift in Sources */,
+				261CA0DC2B3C88E1000D1071 /* EditVC.swift in Sources */,
+				26251AEE2B3F9D5C00A6F330 /* FiltersCell.swift in Sources */,
+				267B385A2B4BF7E7002B9789 /* StoreKitManager.swift in Sources */,
 				26A0F64A2B343728005C0352 /* SceneDelegate.swift in Sources */,
+				26E7BAA22B3F7D4200782431 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +303,19 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		26C01FF92B40337600FF7DC3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26C01FF82B40337600FF7DC3 /* en */,
+				26C01FFA2B4033B000FF7DC3 /* ar */,
+				26C01FFB2B4033C400FF7DC3 /* fr */,
+				26C01FFC2B4033D200FF7DC3 /* de */,
+				26C01FFD2B4033EA00FF7DC3 /* pt-BR */,
+				26C01FFE2B40340000FF7DC3 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -170,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -230,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -282,6 +437,7 @@
 		};
 		26A0F6592B34372B005C0352 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB7671710C2A8CEECFE5DF1 /* Pods-InstaCrop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,17 +446,23 @@
 				DEVELOPMENT_TEAM = 9RVL4BJK4S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaCrop/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "InstaCrop needs your permission to save photos to your device";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "InstaCrop wants to access performance, diagnostic and crash data for app improvement and to offer you relevant ads";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nandatech.InstaCrop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nandatech.instacrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -310,6 +472,7 @@
 		};
 		26A0F65A2B34372B005C0352 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4247EBF96CC50CC7C96CFBF6 /* Pods-InstaCrop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,17 +481,23 @@
 				DEVELOPMENT_TEAM = 9RVL4BJK4S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaCrop/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "InstaCrop needs your permission to save photos to your device";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "InstaCrop wants to access performance, diagnostic and crash data for app improvement and to offer you relevant ads";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nandatech.InstaCrop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nandatech.instacrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

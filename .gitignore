@@ -1,0 +1,5 @@
+# Ignore specific files in Xcode project
+Extensions.swift
+Info.plist
+Products.storekit
+
