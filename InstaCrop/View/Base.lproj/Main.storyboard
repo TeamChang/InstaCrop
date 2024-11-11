@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="tYo-3h-MwF">
-                                <rect key="frame" x="57.666666666666657" y="221" width="260" height="370"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="tYo-3h-MwF">
+                                <rect key="frame" x="57.666666666666657" y="226" width="260" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square-bg" translatesAutoresizingMaskIntoConstraints="NO" id="TaL-kS-rDg">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
@@ -28,8 +28,8 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUN-33-ney">
-                                        <rect key="frame" x="0.0" y="310" width="260" height="60"/>
-                                        <color key="backgroundColor" red="0.54509803921568623" green="0.90980392156862744" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="300" width="260" height="60"/>
+                                        <color key="backgroundColor" red="0.21568627450980393" green="0.70588235294117641" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="F3Y-yC-9Vg"/>
                                         </constraints>
@@ -330,7 +330,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gdq-LU-F0a">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.54509803921568623" green="0.90980392156862744" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.21568627450980393" green="0.70588235294117641" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="labelColor"/>
                         <navigationBarAppearance key="compactAppearance"/>
                     </navigationBar>
@@ -352,7 +352,7 @@
         <image name="envelope.circle" catalog="system" width="128" height="123"/>
         <image name="gift_icon" width="368" height="326"/>
         <image name="icons-select" width="32" height="32"/>
-        <image name="square-bg" width="368" height="365"/>
+        <image name="square-bg" width="612" height="612"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -135,17 +135,19 @@ class EditVC: UIViewController, UIScrollViewDelegate {
     
     @IBAction func exportBtnPressed(_ sender: UIButton) {
         
-        let isPaid = UserDefaults.standard.bool(forKey: "isPaid")
-        if !isPaid {
-          if interstitialAdCount == 0 {
-              self.displayInterstitialAd()
-              interstitialAdCount += 1
-          }
-        }
+//        let isPaid = UserDefaults.standard.bool(forKey: "isPaid")
+//        if !isPaid {
+//          if interstitialAdCount == 0 {
+//              self.displayInterstitialAd()
+//              interstitialAdCount += 1
+//          }
+//        }
         
         let imageToSave = viewBg?.takeScreenshot(with: 5.0) ?? UIImage()
         
         shareImageToInstagram(sender: sender, image: imageToSave)
+        
+        self.displayInterstitialAd()
 
         
 //        SVProgressHUD.show()
@@ -397,8 +399,6 @@ class EditVC: UIViewController, UIScrollViewDelegate {
         // Present the view controller
         self.present(activityViewController, animated: true, completion: nil)
     }
-
-
 }
 
 extension EditVC: UICollectionViewDelegate, UICollectionViewDataSource {

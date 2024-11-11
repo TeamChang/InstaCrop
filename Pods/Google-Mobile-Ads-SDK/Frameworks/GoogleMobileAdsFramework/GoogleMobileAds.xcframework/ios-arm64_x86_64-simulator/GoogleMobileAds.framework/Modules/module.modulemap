@@ -20,6 +20,7 @@ framework module GoogleMobileAds {
   link framework "MediaPlayer"
   link framework "MessageUI"
   link framework "MobileCoreServices"
+  link framework "Network"
   link framework "QuartzCore"
   link framework "SafariServices"
   link framework "Security"
@@ -28,6 +29,7 @@ framework module GoogleMobileAds {
   link framework "UIKit"
   link framework "WebKit"
 
+  header "GADAdChoicesPosition.h"
   header "GADAdChoicesView.h"
   header "GADAdFormat.h"
   header "GADAdLoader.h"
@@ -103,8 +105,6 @@ framework module GoogleMobileAds {
   header "Mediation/GADMAdNetworkAdapterProtocol.h"
   header "Mediation/GADMAdNetworkConnectorProtocol.h"
   header "Mediation/GADMEnums.h"
-  header "Mediation/GADMRewardBasedVideoAdNetworkAdapterProtocol.h"
-  header "Mediation/GADMRewardBasedVideoAdNetworkConnectorProtocol.h"
   header "Mediation/GADMediatedUnifiedNativeAd.h"
   header "Mediation/GADMediatedUnifiedNativeAdNotificationSource.h"
   header "Mediation/GADMediationAd.h"
@@ -120,6 +120,7 @@ framework module GoogleMobileAds {
   header "Mediation/GADMediationRewardedAd.h"
   header "Mediation/GADMediationServerConfiguration.h"
   header "Mediation/GADVersionNumber.h"
+  header "QueryInfo/GADRequest+AdString.h"
   header "RTBMediation/GADRTBAdapter.h"
   header "RTBMediation/GADRTBRequestParameters.h"
 }

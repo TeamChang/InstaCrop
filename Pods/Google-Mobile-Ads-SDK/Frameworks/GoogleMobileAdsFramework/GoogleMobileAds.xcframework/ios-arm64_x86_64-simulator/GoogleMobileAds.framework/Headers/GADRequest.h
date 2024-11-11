@@ -11,13 +11,6 @@
 #import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 #import <UIKit/UIKit.h>
 
-/// Deprecated gender constants.
-typedef NS_ENUM(NSInteger, GADGender) {
-  kGADGenderUnknown,  ///< Deprecated.
-  kGADGenderMale,     ///< Deprecated.
-  kGADGenderFemale    ///< Deprecated.
-};
-
 /// Specifies optional parameters for ad requests.
 @interface GADRequest : NSObject <NSCopying>
 
@@ -43,7 +36,8 @@ typedef NS_ENUM(NSInteger, GADGender) {
 
 #pragma mark Publisher Provided
 
-/// Scene object. Used in multiscene apps to request ads of the appropriate size.
+/// Scene object. Used in multiscene apps to request ads of the appropriate size. If this is nil,
+/// uses the application's key window scene.
 @property(nonatomic, nullable, weak) UIWindowScene *scene API_AVAILABLE(ios(13.0));
 
 #pragma mark Contextual Information

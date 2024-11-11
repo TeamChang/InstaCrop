@@ -24,6 +24,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
+        bgImageView.addGestureRecognizer(tapGesture)
+        bgImageView.isUserInteractionEnabled = true
         
         // Make the button have oval edges
         selectBtn.layer.cornerRadius = selectBtn.frame.size.height / 2
@@ -73,17 +76,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
     }
     
-    @IBAction func selectBtnPressed(_ sender: UIButton) {
-        
-        // Open the image picker when the button is tapped
-        //imagePicker.allowsEditing = true
+    @objc func openImagePicker() {
+       
+        //imagePicker.allowsEditing = true //cause full image not selected. its pre cropped
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
+   }
+    
+    @IBAction func selectBtnPressed(_ sender: UIButton) {
+        
+        openImagePicker()
     }
     
     // Delegate method called when the user picks an image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedImage = info[.originalImage] as? UIImage {
+            
+            //cause full image not selected. its pre cropped in edited image
             
             image = editedImage
             
