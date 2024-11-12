@@ -1,0 +1,35 @@
+{
+  "identifier" : "DF4D7FF0",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "6475195044",
+      "localizations" : [
+        {
+          "description" : "Unlock all features with Pro version. No Ads.",
+          "displayName" : "Insta Crop Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.nandatech.instacrop.pro",
+      "referenceName" : "InstaCrop Pro",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6474727017",
+    "_developerTeamID" : "9RVL4BJK4S",
+    "_lastSynchronizedDate" : 726397804.591169
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}
