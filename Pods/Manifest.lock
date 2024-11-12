@@ -3,7 +3,9 @@ PODS:
     - GoogleUserMessagingPlatform (>= 1.1)
   - GoogleUserMessagingPlatform (2.4.0)
   - NewYorkAlert (1.0.0)
-  - SVProgressHUD (2.2.5)
+  - SVProgressHUD (2.3.1):
+    - SVProgressHUD/Core (= 2.3.1)
+  - SVProgressHUD/Core (2.3.1)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
@@ -21,7 +23,7 @@ SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 7db2098033ad3bfcd72a11e7503b49700a93029e
   GoogleUserMessagingPlatform: f131fa7978d2ba88d7426702b057c2cc318e6595
   NewYorkAlert: cf254ead7dabf55f3bdb728e56673a855034722f
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
 
 PODFILE CHECKSUM: 6a4f162c3cd4900303a98e4748b3c214fd4cd9ef
 

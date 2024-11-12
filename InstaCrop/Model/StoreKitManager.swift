@@ -170,10 +170,10 @@ class StoreKitManager: ObservableObject {
                 for await result in Transaction.updates {
                     let transaction = try self?.verifyPurchase(result)
                     self?.purchaseStatus = .success(transaction?.productID ?? "Unknown Product Id")
-                    print("purchaseStatus: \(transaction?.productID)")
-                    print(self?.purchaseStatus)
+                    print("purchaseStatus: \(String(describing: transaction?.productID))")
+                    print(self?.purchaseStatus as Any)
                     UserDefaults.standard.set(true, forKey: "isPaid")
-                    print("UserDefaults: \(UserDefaults.standard.string(forKey: "isPaid"))")
+                    print("UserDefaults: \(String(describing: UserDefaults.standard.string(forKey: "isPaid")))")
                     self?.transactionCompletionStatus = true
                     await transaction?.finish()
                 }
