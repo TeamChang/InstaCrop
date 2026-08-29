@@ -11,29 +11,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var selectBtn: UIButton!
-    
+
     private var storeKitManager = StoreKitManager()
     let imagePicker = UIImagePickerController()
     var image: UIImage?
-    
+
     var productLocalPrice = ""
     var productTitle = ""
     var productDesc = ""
-    
+
+    // Instagram-style gradient (matches the app icon) behind the main CTA button
+    private let selectBtnGradient = CAGradientLayer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         imagePicker.delegate = self
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
         bgImageView.addGestureRecognizer(tapGesture)
         bgImageView.isUserInteractionEnabled = true
-        
+
         // Make the button have oval edges
         selectBtn.layer.cornerRadius = selectBtn.frame.size.height / 2
         selectBtn.clipsToBounds = true
-        
+
+        setupSelectBtnGradient()
+
         getProductsInfo()
-        
+
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        selectBtnGradient.frame = selectBtn.bounds
+        selectBtnGradient.cornerRadius = selectBtn.layer.cornerRadius
+    }
+
+    private func setupSelectBtnGradient() {
+
+        // Blue -> purple -> magenta -> orange, same diagonal sweep as the app icon
+        selectBtnGradient.colors = [
+            UIColor(red: 0.251, green: 0.365, blue: 0.902, alpha: 1).cgColor, // #405DE6
+            UIColor(red: 0.514, green: 0.227, blue: 0.706, alpha: 1).cgColor, // #833AB4
+            UIColor(red: 0.757, green: 0.208, blue: 0.518, alpha: 1).cgColor, // #C13584
+            UIColor(red: 0.969, green: 0.467, blue: 0.216, alpha: 1).cgColor  // #F77737
+        ]
+        selectBtnGradient.locations = [0, 0.35, 0.65, 1]
+        selectBtnGradient.startPoint = CGPoint(x: 0, y: 0)
+        selectBtnGradient.endPoint = CGPoint(x: 1, y: 1)
+        selectBtnGradient.cornerRadius = selectBtn.layer.cornerRadius
+
+        selectBtn.layer.insertSublayer(selectBtnGradient, at: 0)
     }
     
     func getProductsInfo() {

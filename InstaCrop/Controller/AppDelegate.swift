@@ -16,10 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if let navigationController = window?.rootViewController as? UINavigationController {
-               navigationController.navigationBar.tintColor = UIColor(named: "C21292")
-           }
-        
+        // Brand nav bar (Instagram-style pink/magenta from the app icon), configured via
+        // UINavigationBarAppearance rather than `window?.rootViewController` here, since
+        // `window` isn't populated yet at this point in the UIScene app lifecycle.
+        //
+        // Using UINavigationBarAppearance (rather than just the legacy backgroundColor/
+        // tintColor storyboard properties) ensures the bar stays opaque in its
+        // scrollEdgeAppearance state too — otherwise the bar renders transparent at the
+        // top of scroll content and the status bar area shows the view's background
+        // instead of the brand color.
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = UIColor(named: "violet")
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        let barButtonAppearance = UIBarButtonItemAppearance(style: .plain)
+        barButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backButtonAppearance = barButtonAppearance
+
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        UINavigationBar.appearance().compactAppearance = navBarAppearance
+        // White back-chevron, bar-button-item icons/text, etc.
+        UINavigationBar.appearance().tintColor = .white
+
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         return true

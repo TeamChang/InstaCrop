@@ -13,13 +13,13 @@ import NewYorkAlert
 
 enum AdUnitID {
     
-    static let banner: String = "ca-app-pub-4544338503356333/6494269896" //live
+    static let banner: String = "ca-app-pub-4938975973197431/4100786247" //live
     //Banner        "ca-app-pub-3940256099942544/2934735716"//test
-              
-    static let interstitialAd: String = "ca-app-pub-4544338503356333/2166397679" //live
+
+    static let interstitialAd: String = "ca-app-pub-4938975973197431/1741331736" //live
     //Interstitial      "ca-app-pub-3940256099942544/4411468910"//test
-                    
-    //GADApplicationID live    ca-app-pub-4544338503356333~2367322628
+
+    //GADApplicationID live    ca-app-pub-4938975973197431~4455175314
     //GADApplicationID test    ca-app-pub-3940256099942544~1458002511
 }
 

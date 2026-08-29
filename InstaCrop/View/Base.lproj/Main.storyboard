@@ -29,7 +29,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUN-33-ney">
                                         <rect key="frame" x="0.0" y="300" width="260" height="60"/>
-                                        <color key="backgroundColor" red="0.21568627450980393" green="0.70588235294117641" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.070588235294117646" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="F3Y-yC-9Vg"/>
                                         </constraints>
@@ -90,7 +90,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="CUF-QK-RS6"/>
                                                     <constraint firstAttribute="width" constant="50" id="JtO-mB-ypq"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.21568627450980393" green="0.70588235294117641" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.44313725490196076" green="0.11372549019607843" blue="0.6901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrow.left.and.right.circle" catalog="system" title=" "/>
                                                 <connections>
@@ -103,7 +103,7 @@
                                                     <constraint firstAttribute="width" constant="50" id="AB8-MJ-bC2"/>
                                                     <constraint firstAttribute="height" constant="50" id="ntA-7v-5Tl"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.21568627450980393" green="0.70588235294117641" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.44313725490196076" green="0.11372549019607843" blue="0.6901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle.slash.fill" catalog="system" title=" "/>
                                                 <connections>
@@ -116,7 +116,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="F0V-Ib-PK1"/>
                                                     <constraint firstAttribute="width" constant="50" id="FZ0-aR-yeG"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.21568627450980393" green="0.70588235294117641" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.44313725490196076" green="0.11372549019607843" blue="0.6901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="camera.filters" catalog="system" title=" "/>
                                                 <connections>
@@ -129,7 +129,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="9Qh-DE-BGC"/>
                                                     <constraint firstAttribute="width" constant="50" id="ak8-UW-RzL"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.21568627450980393" green="0.70588235294117641" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.44313725490196076" green="0.11372549019607843" blue="0.6901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" title=" "/>
                                                 <connections>
@@ -224,7 +224,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="web-Vl-inB">
                                         <rect key="frame" x="16" y="250" width="311" height="60"/>
-                                        <color key="backgroundColor" red="0.54509803921568623" green="0.90980392156862744" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.070588235294117646" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Biz-pp-5SR"/>
                                         </constraints>
@@ -253,7 +253,7 @@
                                             <constraint firstAttribute="height" constant="60" id="ITx-FQ-yTw"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="d6P-Tu-HZj"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.19864551825938959" green="0.7561649055756634" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.44313725490196076" green="0.11372549019607843" blue="0.6901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="envelope.circle" catalog="system" title=" ">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
@@ -267,7 +267,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ULH-l2-c2k"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.5450980392" green="0.90980392160000001" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.44313725490196076" green="0.11372549019607843" blue="0.6901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Restore Purchase">
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
@@ -281,7 +281,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="yE3-NM-h4x"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.5450980392" green="0.90980392160000001" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.44313725490196076" green="0.11372549019607843" blue="0.6901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="More Apps">
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
@@ -330,8 +330,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gdq-LU-F0a">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.21568627450980393" green="0.70588235294117641" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" red="0.76078431372549016" green="0.070588235294117646" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <navigationBarAppearance key="compactAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -42,11 +42,11 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
 
         restoreBtn.layer.borderWidth = 1
         restoreBtn.layer.cornerRadius = 5
-        restoreBtn.layer.borderColor = UIColor(named: "#8BE8E5")?.cgColor
+        restoreBtn.layer.borderColor = UIColor(named: "purple")?.cgColor
         
         moreAppsBtn.layer.borderWidth = 1
         moreAppsBtn.layer.cornerRadius = 5
-        moreAppsBtn.layer.borderColor = UIColor(named: "#8BE8E5")?.cgColor
+        moreAppsBtn.layer.borderColor = UIColor(named: "purple")?.cgColor
         
         featuresMsgLbl.text = NSLocalizedString("proFeatures", comment: "pro features")
     
