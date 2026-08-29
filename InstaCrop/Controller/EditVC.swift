@@ -37,8 +37,8 @@ class EditVC: UIViewController, UIScrollViewDelegate {
     
     let extensions = Extensions()
     
-    private var bannerView: GADBannerView! //googleAds banner
-    private var interstitial: GADInterstitialAd? //googleAds interstitial
+    private var bannerView: BannerView! //googleAds banner
+    private var interstitial: InterstitialAd? //googleAds interstitial
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -515,10 +515,10 @@ extension UIView {
 }
 
 // MARK: - Google Ads Delegate
-extension EditVC: GADBannerViewDelegate, GADFullScreenContentDelegate {
-    
+extension EditVC: BannerViewDelegate, FullScreenContentDelegate {
+
     //google ads delegate banner
-    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+    func bannerViewDidReceiveAd(_ bannerView: BannerView) {
       // Add banner to view and add constraints as above.
         
         let isPaid = UserDefaults.standard.bool(forKey: "isPaid")
@@ -542,16 +542,16 @@ extension EditVC: GADBannerViewDelegate, GADFullScreenContentDelegate {
         
         // In this case, we instantiate the banner with desired ad size.
         
-        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView = BannerView(adSize: AdSizeBanner)
         addBannerViewToView(bannerView)
-        
+
         bannerView.adUnitID = AdUnitID.banner
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        bannerView.load(Request())
         bannerView.delegate = self
     }
-    
-    func addBannerViewToView(_ bannerView: GADBannerView) {
+
+    func addBannerViewToView(_ bannerView: BannerView) {
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bannerView)
         view.addConstraints(
@@ -573,18 +573,18 @@ extension EditVC: GADBannerViewDelegate, GADFullScreenContentDelegate {
        }
     
     //google ads delegate interstitial
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+    func adDidDismissFullScreenContent(_ ad: FullScreenPresentingAd) {
         print("Ad did dismiss full screen content.")
         //showAdWToPlayVideoCount += 1
         loadInterstitialAd()
     }
-    
+
     func loadInterstitialAd() {
-        
+
         loadBannerAd()
 
-        let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: AdUnitID.interstitialAd,
+        let request = Request()
+        InterstitialAd.load(with: AdUnitID.interstitialAd,
                                request: request,
                                completionHandler: { [self] ad, error in
             if let error = error {
@@ -599,7 +599,7 @@ extension EditVC: GADBannerViewDelegate, GADFullScreenContentDelegate {
     private func displayInterstitialAd() {
 
        if interstitial != nil {
-           interstitial?.present(fromRootViewController: self)
+           interstitial?.present(from: self)
        } else {
            print("interstitial ad wasn't ready")
        }

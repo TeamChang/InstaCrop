@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // White back-chevron, bar-button-item icons/text, etc.
         UINavigationBar.appearance().tintColor = .white
 
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        MobileAds.shared.start(completionHandler: nil)
         
         return true
     }
