@@ -38,3 +38,15 @@
 "emailSent" = "E-mail envoyé.";
 "emailSentBody" = "Veuillez vérifier votre boîte de réception pour une réponse.";
 
+//grid preview & split
+"gridSafeLabel" = "La grille du profil affiche cette zone";
+"gridSafeFull" = "Entièrement visible sur la grille du profil";
+"splitTitle" = "Découper";
+"splitCarousel" = "Carrousel";
+"splitGrid" = "Grille";
+"splitFill" = "Remplir";
+"splitNoCrop" = "Sans recadrage";
+"splitSlides %d" = "Diapositives : %d";
+"splitCarouselHint" = "Instagram s'ouvre sur la diapositive 1. Touchez Sélectionner plusieurs et ajoutez les autres dans l'ordre.";
+"splitGridHint" = "Touchez n°1 pour le publier sur Instagram, puis revenez et touchez le numéro suivant. Les cases publiées deviennent grises.";
+"splitOpenInstagram" = "Enregistrer et ouvrir Instagram";

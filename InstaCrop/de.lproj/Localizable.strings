@@ -38,3 +38,15 @@
 "emailSent" = "E-Mail gesendet.";
 "emailSentBody" = "Bitte überprüfen Sie Ihren E-Mail-Posteingang auf eine Antwort.";
 
+//grid preview & split
+"gridSafeLabel" = "Das Profilraster zeigt diesen Bereich";
+"gridSafeFull" = "Im Profilraster vollständig sichtbar";
+"splitTitle" = "Teilen";
+"splitCarousel" = "Karussell";
+"splitGrid" = "Raster";
+"splitFill" = "Füllen";
+"splitNoCrop" = "Ohne Zuschnitt";
+"splitSlides %d" = "Folien: %d";
+"splitCarouselHint" = "Instagram öffnet sich mit Folie 1. Tippe auf „Mehrere auswählen“ und füge die anderen Folien der Reihe nach hinzu.";
+"splitGridHint" = "Tippe auf Nr. 1, um sie auf Instagram zu posten, komm dann zurück und tippe auf die nächste Nummer. Gepostete Kacheln werden grau.";
+"splitOpenInstagram" = "Sichern & Instagram öffnen";

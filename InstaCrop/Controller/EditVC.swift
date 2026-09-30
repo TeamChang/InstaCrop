@@ -35,6 +35,11 @@ class EditVC: UIViewController, UIScrollViewDelegate {
     
     var interstitialAdCount = 0
     
+    private var canvasRatio: SplitRenderer.Ratio = .square
+    private let ratioControl = UISegmentedControl(items: SplitRenderer.Ratio.allCases.map { $0.title })
+    private let gridSafeOverlay = GridSafeOverlayView()
+    private var isGridPreviewOn = false
+    
     let extensions = Extensions()
     
     private var bannerView: BannerView! //googleAds banner
@@ -59,6 +64,9 @@ class EditVC: UIViewController, UIScrollViewDelegate {
         
         potrait()
         
+        setupRatioControl()
+        setupGridSafeOverlay()
+        setupNavItems()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -101,8 +109,10 @@ class EditVC: UIViewController, UIScrollViewDelegate {
             
             blurBtn.setImage(UIImage(systemName: "circle.fill"), for: .normal)
             
+            // Transparent background instead of white
             imageViewBg.image = nil
-            imageViewBg.backgroundColor = .white
+            imageViewBg.backgroundColor = .clear
+            viewBg.backgroundColor = .clear
             
         } else {
             
@@ -110,6 +120,7 @@ class EditVC: UIViewController, UIScrollViewDelegate {
                 
                 blurBtn.setImage(UIImage(systemName: "circle.slash.fill"), for: .normal)
                 
+                viewBg.backgroundColor = .systemBackground
                 imageViewBg.image = extensions.applyBlur(to: image, intensity: 1.0)
             }
         }
@@ -220,6 +231,87 @@ class EditVC: UIViewController, UIScrollViewDelegate {
         
     }
     
+    // MARK: - Canvas ratio & grid preview
+    
+    private func setupRatioControl() {
+        
+        ratioControl.selectedSegmentIndex = 0
+        ratioControl.translatesAutoresizingMaskIntoConstraints = false
+        ratioControl.addTarget(self, action: #selector(ratioChanged), for: .valueChanged)
+        view.addSubview(ratioControl)
+        
+        NSLayoutConstraint.activate([
+            ratioControl.centerXAnchor.constraint(equalTo: viewBg.centerXAnchor),
+            ratioControl.bottomAnchor.constraint(equalTo: viewBg.topAnchor, constant: -16),
+            ratioControl.widthAnchor.constraint(equalToConstant: 220)
+        ])
+    }
+    
+    private func setupGridSafeOverlay() {
+        
+        // Sits on top of viewBg (not inside it) so it never ends up in the exported image
+        gridSafeOverlay.translatesAutoresizingMaskIntoConstraints = false
+        gridSafeOverlay.isHidden = true
+        view.addSubview(gridSafeOverlay)
+        
+        NSLayoutConstraint.activate([
+            gridSafeOverlay.topAnchor.constraint(equalTo: viewBg.topAnchor),
+            gridSafeOverlay.bottomAnchor.constraint(equalTo: viewBg.bottomAnchor),
+            gridSafeOverlay.leadingAnchor.constraint(equalTo: viewBg.leadingAnchor),
+            gridSafeOverlay.trailingAnchor.constraint(equalTo: viewBg.trailingAnchor)
+        ])
+    }
+    
+    private func setupNavItems() {
+        
+        let splitItem = UIBarButtonItem(image: UIImage(systemName: "scissors"),
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(splitBtnPressed))
+        let gridItem = UIBarButtonItem(image: UIImage(systemName: "square.grid.3x3"),
+                                       style: .plain,
+                                       target: self,
+                                       action: #selector(gridPreviewBtnPressed(_:)))
+        navigationItem.rightBarButtonItems = [splitItem, gridItem]
+    }
+    
+    @objc private func ratioChanged() {
+        
+        canvasRatio = SplitRenderer.Ratio.allCases[ratioControl.selectedSegmentIndex]
+        
+        // Square stays 300×300; taller ratios keep a 360pt height so they fit small screens
+        let height: CGFloat = canvasRatio == .square ? 300 : 360
+        let width = (height / canvasRatio.heightMultiplier).rounded()
+        
+        for constraint in viewBg.constraints where constraint.secondItem == nil {
+            if constraint.firstAttribute == .width { constraint.constant = width }
+            if constraint.firstAttribute == .height { constraint.constant = height }
+        }
+        
+        // The filter overlay is a snapshot of the old canvas size, so drop it
+        filterImageView.removeFromSuperview()
+        filterImageView.image = nil
+        
+        UIView.animate(withDuration: 0.25) {
+            self.view.layoutIfNeeded()
+        }
+        gridSafeOverlay.setNeedsDisplay()
+    }
+    
+    @objc private func gridPreviewBtnPressed(_ sender: UIBarButtonItem) {
+        
+        isGridPreviewOn.toggle()
+        gridSafeOverlay.isHidden = !isGridPreviewOn
+        sender.image = UIImage(systemName: isGridPreviewOn ? "square.grid.3x3.fill" : "square.grid.3x3")
+    }
+    
+    @objc private func splitBtnPressed() {
+        
+        let splitVC = SplitVC()
+        splitVC.sourceImage = editImage
+        navigationController?.pushViewController(splitVC, animated: true)
+    }
+    
     // MARK: - Functions
     
     private func potrait() {
@@ -239,8 +331,8 @@ class EditVC: UIViewController, UIScrollViewDelegate {
         NSLayoutConstraint.activate([
             bgUIView.topAnchor.constraint(equalTo: imageViewBg.topAnchor),
             bgUIView.bottomAnchor.constraint(equalTo: imageViewBg.bottomAnchor),
-            bgUIView.leadingAnchor.constraint(equalTo: imageViewBg.leadingAnchor, constant: 45),
-            bgUIView.trailingAnchor.constraint(equalTo: imageViewBg.trailingAnchor, constant: -45),
+            bgUIView.centerXAnchor.constraint(equalTo: imageViewBg.centerXAnchor),
+            bgUIView.widthAnchor.constraint(equalTo: imageViewBg.widthAnchor, multiplier: 0.7),
         ])
 
         // Create a new UIImageView (imageViewFg)
@@ -280,8 +372,8 @@ class EditVC: UIViewController, UIScrollViewDelegate {
 
         // Set up constraints for bgUIView within imageViewBg
         NSLayoutConstraint.activate([
-            bgUIView.topAnchor.constraint(equalTo: imageViewBg.topAnchor, constant: 45),
-            bgUIView.bottomAnchor.constraint(equalTo: imageViewBg.bottomAnchor, constant: -45),
+            bgUIView.centerYAnchor.constraint(equalTo: imageViewBg.centerYAnchor),
+            bgUIView.heightAnchor.constraint(equalTo: imageViewBg.heightAnchor, multiplier: 0.7),
             bgUIView.leadingAnchor.constraint(equalTo: imageViewBg.leadingAnchor),
             bgUIView.trailingAnchor.constraint(equalTo: imageViewBg.trailingAnchor),
         ])
@@ -355,7 +447,9 @@ class EditVC: UIViewController, UIScrollViewDelegate {
     
     func shareImageToInstagram(sender: UIButton, image: UIImage) {
         
-        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
+        // JPEG has no alpha channel, so use PNG when the background is transparent
+        let isTransparent = !isBlur
+        guard let imageData = isTransparent ? image.pngData() : image.jpegData(compressionQuality: 1.0) else {
             // Unable to convert the image to data
             
             self.extensions.presentAlert(title: nil,
@@ -367,7 +461,7 @@ class EditVC: UIViewController, UIScrollViewDelegate {
         }
 
         // Save the image data to a temporary file
-        let temporaryFileURL = FileManager.default.temporaryDirectory.appendingPathComponent("instagramImage.ig")
+        let temporaryFileURL = FileManager.default.temporaryDirectory.appendingPathComponent(isTransparent ? "InstaCrop.png" : "instagramImage.ig")
 
         do {
             try imageData.write(to: temporaryFileURL)

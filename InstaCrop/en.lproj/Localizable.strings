@@ -38,3 +38,16 @@
 "emailSaved" = "Email saved.";
 "emailSent" = "Email sent.";
 "emailSentBody" = "please check your email inbox for a response.";
+
+//grid preview & split
+"gridSafeLabel" = "Profile grid shows this area";
+"gridSafeFull" = "Fully visible on profile grid";
+"splitTitle" = "Split";
+"splitCarousel" = "Carousel";
+"splitGrid" = "Grid";
+"splitFill" = "Fill";
+"splitNoCrop" = "No Crop";
+"splitSlides %d" = "Slides: %d";
+"splitCarouselHint" = "Instagram opens with slide 1. Tap Select Multiple and add the other slides in order.";
+"splitGridHint" = "Tap #1 to post it on Instagram, then come back and tap the next number. Posted tiles turn grey.";
+"splitOpenInstagram" = "Save & Open Instagram";

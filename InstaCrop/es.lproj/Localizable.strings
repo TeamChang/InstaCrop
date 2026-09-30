@@ -38,3 +38,15 @@
 "emailSent" = "Correo electrónico enviado.";
 "emailSentBody" = "Por favor, revisa tu bandeja de entrada de correo electrónico para obtener una respuesta.";
 
+//grid preview & split
+"gridSafeLabel" = "La cuadrícula del perfil muestra esta zona";
+"gridSafeFull" = "Totalmente visible en la cuadrícula del perfil";
+"splitTitle" = "Dividir";
+"splitCarousel" = "Carrusel";
+"splitGrid" = "Cuadrícula";
+"splitFill" = "Rellenar";
+"splitNoCrop" = "Sin recorte";
+"splitSlides %d" = "Diapositivas: %d";
+"splitCarouselHint" = "Instagram se abre con la diapositiva 1. Toca Seleccionar varias y añade las demás en orden.";
+"splitGridHint" = "Toca el n.º 1 para publicarlo en Instagram, luego vuelve y toca el siguiente número. Los mosaicos publicados se vuelven grises.";
+"splitOpenInstagram" = "Guardar y abrir Instagram";

@@ -4,6 +4,10 @@
 <dict>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-4938975973197431~4455175314</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>instagram</string>
+	</array>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>

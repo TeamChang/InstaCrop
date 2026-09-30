@@ -38,3 +38,15 @@
 "emailSent" = "E-mail enviado.";
 "emailSentBody" = "Por favor, verifique sua caixa de entrada de e-mail para uma resposta.";
 
+//grid preview & split
+"gridSafeLabel" = "A grade do perfil mostra esta área";
+"gridSafeFull" = "Totalmente visível na grade do perfil";
+"splitTitle" = "Dividir";
+"splitCarousel" = "Carrossel";
+"splitGrid" = "Grade";
+"splitFill" = "Preencher";
+"splitNoCrop" = "Sem corte";
+"splitSlides %d" = "Slides: %d";
+"splitCarouselHint" = "O Instagram abre com o slide 1. Toque em Selecionar vários e adicione os outros slides em ordem.";
+"splitGridHint" = "Toque no nº 1 para publicá-lo no Instagram, depois volte e toque no próximo número. Os blocos publicados ficam cinza.";
+"splitOpenInstagram" = "Salvar e abrir o Instagram";

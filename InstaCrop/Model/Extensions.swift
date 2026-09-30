@@ -88,7 +88,8 @@ struct Extensions {
     func applyBlur(to image: UIImage, intensity: CGFloat) -> UIImage? {
         if let ciImage = CIImage(image: image) {
             let filter = CIFilter(name: "CIGaussianBlur")
-            filter?.setValue(ciImage, forKey: kCIInputImageKey)
+            // Clamp edges so the blur doesn't fade to transparent (white halo) at the borders
+            filter?.setValue(ciImage.clampedToExtent(), forKey: kCIInputImageKey)
             filter?.setValue(intensity * 10, forKey: kCIInputRadiusKey) // Adjust the blur radius
 
             if let outputImage = filter?.outputImage,
