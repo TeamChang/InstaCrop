@@ -8,6 +8,7 @@
 import UIKit
 import Photos
 import GoogleMobileAds
+import UserMessagingPlatform
 import StoreKit
 import SVProgressHUD
 
@@ -49,12 +50,13 @@ class EditVC: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         let isPaid = UserDefaults.standard.bool(forKey: "isPaid")
-        if (!isPaid) {
-            
+        // canRequestAds is false until the UMP consent flow (SceneDelegate) allows ad requests.
+        if (!isPaid && ConsentInformation.shared.canRequestAds) {
+
             loadBannerAd()
             loadInterstitialAd()
         }
-        
+
         extensions.setupShadow(viewBg: viewBg)
 
         if let image = editImage {
@@ -674,8 +676,6 @@ extension EditVC: BannerViewDelegate, FullScreenContentDelegate {
     }
 
     func loadInterstitialAd() {
-
-        loadBannerAd()
 
         let request = Request()
         InterstitialAd.load(with: AdUnitID.interstitialAd,

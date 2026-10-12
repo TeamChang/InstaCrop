@@ -7,6 +7,7 @@
 
 import UIKit
 import AppTrackingTransparency
+import UserMessagingPlatform
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -34,21 +35,62 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        guard !didRequestConsent else { return }
+        didRequestConsent = true
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-            
-            if #available(iOS 14, *) {
-                ATTrackingManager.requestTrackingAuthorization { status in
-                    switch status {
-                        case .authorized:
-                            print("enable tracking")
-                        case .denied:
-                            print("disable tracking")
-                        default:
-                            print("default tracking")
-                    }
+            self.requestGoogleConsent()
+        })
+    }
+
+    // MARK: - Google User Messaging Platform (consent)
+
+    private var didRequestConsent = false
+
+    // Gather GDPR/UK consent via Google's User Messaging Platform before requesting any ads.
+    // AdMob requires this for EEA/UK traffic; requesting ads without it can restrict serving
+    // to non-personalized, much lower-paying ads. The ATT prompt follows once this resolves,
+    // so the two prompts never overlap.
+    private func requestGoogleConsent() {
+        let parameters = RequestParameters()
+
+        ConsentInformation.shared.requestConsentInfoUpdate(with: parameters) { [weak self] error in
+            if let error = error {
+                print("⚠️ UMP consent info update failed: \(error.localizedDescription)")
+                // Fall through anyway so ads aren't permanently blocked by a one-off network error.
+                self?.finishConsentGathering()
+                return
+            }
+
+            ConsentForm.loadAndPresentIfRequired(from: self?.window?.rootViewController) { [weak self] formError in
+                if let formError = formError {
+                    print("⚠️ UMP consent form failed: \(formError.localizedDescription)")
+                }
+                self?.finishConsentGathering()
+            }
+        }
+    }
+
+    private func finishConsentGathering() {
+        if ConsentInformation.shared.canRequestAds {
+            (UIApplication.shared.delegate as? AppDelegate)?.startGoogleMobileAdsSDK()
+        }
+        requestTrackingAuthorization()
+    }
+
+    private func requestTrackingAuthorization() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                    case .authorized:
+                        print("enable tracking")
+                    case .denied:
+                        print("disable tracking")
+                    default:
+                        print("default tracking")
                 }
             }
-        })
+        }
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

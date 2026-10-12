@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMobileAds
+import UserMessagingPlatform
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -41,9 +42,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // White back-chevron, bar-button-item icons/text, etc.
         UINavigationBar.appearance().tintColor = .white
 
-        MobileAds.shared.start(completionHandler: nil)
-        
+        // If consent was already gathered in a previous session, start the SDK right away.
+        // Otherwise SceneDelegate starts it once the UMP consent flow resolves.
+        if ConsentInformation.shared.canRequestAds {
+            startGoogleMobileAdsSDK()
+        }
+
         return true
+    }
+
+    // MARK: - Google Mobile Ads
+
+    private var isMobileAdsStartCalled = false
+
+    func startGoogleMobileAdsSDK() {
+        guard !isMobileAdsStartCalled else { return }
+        isMobileAdsStartCalled = true
+        MobileAds.shared.start(completionHandler: nil)
     }
 
     // MARK: UISceneSession Lifecycle
