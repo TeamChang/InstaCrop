@@ -216,18 +216,16 @@ class EditVC: UIViewController, UIScrollViewDelegate {
         // Has the process been completed several times and the user has not already been prompted for this version?
         if count >= 4 && currentVersion != lastVersionPromptedForReview {
             let twoSecondsFromNow = DispatchTime.now() + 2.0
-            DispatchQueue.main.asyncAfter(deadline: twoSecondsFromNow) { [navigationController] in
-                if navigationController?.topViewController is ViewController {
-                    
-                    if #available(iOS 14.0, *) {
-                          if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
-                              SKStoreReviewController.requestReview(in: scene)
-                          }
-                      } else {
-                          SKStoreReviewController.requestReview()
-                      }
-                    UserDefaults.standard.set(currentVersion, forKey: UserDefaultsKeys.lastVersionPromptedForReviewKey)
-                }
+            DispatchQueue.main.asyncAfter(deadline: twoSecondsFromNow) { [weak self] in
+                // Only prompt while the editor is on screen with nothing covering it (e.g. an
+                // interstitial ad). Otherwise skip without recording, so the next export retries.
+                guard let self = self,
+                      self.presentedViewController == nil,
+                      let scene = self.viewIfLoaded?.window?.windowScene,
+                      scene.activationState == .foregroundActive else { return }
+
+                SKStoreReviewController.requestReview(in: scene)
+                UserDefaults.standard.set(currentVersion, forKey: UserDefaultsKeys.lastVersionPromptedForReviewKey)
             }
         }
         
@@ -477,6 +475,12 @@ class EditVC: UIViewController, UIScrollViewDelegate {
         let activityItems = [temporaryFileURL]
 
         let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        // Ask for an App Store review only after a successful share, not a cancelled one
+        activityViewController.completionWithItemsHandler = { [weak self] _, completed, _, _ in
+            if completed {
+                self?.review()
+            }
+        }
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         activityViewController.popoverPresentationController?.sourceRect = sender.frame
 
